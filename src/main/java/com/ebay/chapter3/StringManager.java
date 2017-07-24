@@ -18,7 +18,7 @@ public class StringManager {
 		return res.getString(key);
 	}
 	
-	public static StringManager getStringMananger(String packageName) {
+	public static StringManager getManager(String packageName) {
 		StringManager stringManager = MGRS.get(packageName);
 		if(null == stringManager) {
 			synchronized (StringManager.class) {
