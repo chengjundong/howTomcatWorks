@@ -3,6 +3,7 @@ package com.ebay.chapter3;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
 
 public class RequestStream extends ServletInputStream {
@@ -44,6 +45,24 @@ public class RequestStream extends ServletInputStream {
 		count = 0;
 		length = request.getContentLength();
 		stream = request.getStream();
+	}
+
+	@Override
+	public boolean isFinished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isReady() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void setReadListener(ReadListener readListener) {
+		// TODO Auto-generated method stub
+
 	}
 
 	/**

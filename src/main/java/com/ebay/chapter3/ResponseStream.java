@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.WriteListener;
 
 public class ResponseStream extends ServletOutputStream {
 
@@ -49,6 +50,16 @@ public class ResponseStream extends ServletOutputStream {
 		commit = false;
 		count = 0;
 		this.response = response;
+	}
+
+	@Override
+	public boolean isReady() {
+		return false;
+	}
+
+	@Override
+	public void setWriteListener(WriteListener writeListener) {
+
 	}
 
 	/**

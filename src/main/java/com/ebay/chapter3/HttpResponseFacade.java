@@ -2,6 +2,7 @@ package com.ebay.chapter3;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
 import java.util.Locale;
 
 import javax.servlet.ServletOutputStream;
@@ -134,5 +135,47 @@ public class HttpResponseFacade implements HttpServletResponse {
 
 	public void setStatus(int sc, String message) {
 		response.setStatus(sc, message);
+	}
+
+	@Override
+	public String getContentType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setCharacterEncoding(String charset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setContentLengthLong(long len) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getStatus() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getHeader(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<String> getHeaders(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Collection<String> getHeaderNames() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
