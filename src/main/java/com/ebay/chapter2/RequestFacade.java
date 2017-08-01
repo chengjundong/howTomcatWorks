@@ -7,13 +7,9 @@ import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.servlet.AsyncContext;
-import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 
 public class RequestFacade implements ServletRequest {
 
@@ -46,11 +42,6 @@ public class RequestFacade implements ServletRequest {
 	@Override
 	public int getContentLength() {
 		return request.getContentLength();
-	}
-
-	@Override
-	public long getContentLengthLong() {
-		return request.getContentLengthLong();
 	}
 
 	@Override
@@ -151,61 +142,5 @@ public class RequestFacade implements ServletRequest {
 	@Override
 	public String getRealPath(String path) {
 		return request.getRealPath(path);
-	}
-
-	@Override
-	public int getRemotePort() {
-		return request.getRemotePort();
-	}
-
-	@Override
-	public String getLocalName() {
-		return request.getLocalName();
-	}
-
-	@Override
-	public String getLocalAddr() {
-		return request.getLocalAddr();
-	}
-
-	@Override
-	public int getLocalPort() {
-		return request.getLocalPort();
-	}
-
-	@Override
-	public ServletContext getServletContext() {
-		return request.getServletContext();
-	}
-
-	@Override
-	public AsyncContext startAsync() throws IllegalStateException {
-		return request.startAsync();
-	}
-
-	@Override
-	public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse)
-			throws IllegalStateException {
-		return request.startAsync(servletRequest, servletResponse);
-	}
-
-	@Override
-	public boolean isAsyncStarted() {
-		return request.isAsyncStarted();
-	}
-
-	@Override
-	public boolean isAsyncSupported() {
-		return request.isAsyncSupported();
-	}
-
-	@Override
-	public AsyncContext getAsyncContext() {
-		return request.getAsyncContext();
-	}
-
-	@Override
-	public DispatcherType getDispatcherType() {
-		return request.getDispatcherType();
 	}
 }
